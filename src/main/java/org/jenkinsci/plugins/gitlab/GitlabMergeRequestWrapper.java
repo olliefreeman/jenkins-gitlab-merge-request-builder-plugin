@@ -195,7 +195,7 @@ public class GitlabMergeRequestWrapper {
 
         if (_builder.isEnableBuildTriggeredMessage()) {
             createNote(message);
-            _logger.log(Level.INFO, message);
+           _logger.log(Level.INFO, message + " for "+_project.getNameWithNamespace()+" => "+getSourceBranch());
         }
     }
 
